@@ -19,6 +19,7 @@ cd pico_base
 
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
 git clone https://github.com/raspberrypi/pico-sdk
+cd pico-sdk
 git submodule update --init
 
 # For PICO support
@@ -27,6 +28,11 @@ rm -R tinyusb
 git clone https://github.com/hathach/tinyusb  -b master
 cd tinyusb
 git submodule update --init --recursive
+
+# Or this
+cd pico_base/pico-sdk/lib/tinyusb/hw/mcu/raspberry_pi
+git submodule update --init
+
 
 export PICO_SDK_PATH=~/pico_base/pico-sdk  # your SDK location
 
