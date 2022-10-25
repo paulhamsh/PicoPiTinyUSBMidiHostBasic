@@ -29,9 +29,9 @@ git clone https://github.com/hathach/tinyusb  -b master
 cd tinyusb
 git submodule update --init --recursive
 
-# Or this
-cd pico_base/pico-sdk/lib/tinyusb/hw/mcu/raspberry_pi
-git submodule update --init
+# This doesn't work
+# cd pico_base/pico-sdk/lib/tinyusb/hw/mcu/raspberry_pi
+# git submodule update --init
 
 
 export PICO_SDK_PATH=~/pico_base/pico-sdk  # your SDK location
