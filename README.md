@@ -23,6 +23,8 @@ git clone https://github.com/raspberrypi/pico-sdk
 cd pico-sdk/lib
 rm -R tinyusb
 git clone https://github.com/hathach/tinyusb  -b master
+cd tinyusb
+git submodule update --init --recursive
 
 export PICO_SDK_PATH=~/pico_base/pico-sdk  # your SDK location
 
