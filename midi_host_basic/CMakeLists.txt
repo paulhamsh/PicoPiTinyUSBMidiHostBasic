@@ -3,9 +3,6 @@ cmake_minimum_required(VERSION 3.5)
 ###include(~/pico2/pico-sdk/lib/tinyusb/hw/bsp/family_support.cmake)
 include($ENV{PICO_SDK_PATH}/lib/tinyusb/hw/bsp/family_support.cmake)
 
-
-
-
 # gets PROJECT name for the example
 family_get_project_name(PROJECT ${CMAKE_CURRENT_LIST_DIR})
 
