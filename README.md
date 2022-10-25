@@ -1,7 +1,8 @@
 # PicoPiTinyUSBMidiHostBasic
 
-Absolute basic bare API USB Midi Host.
-It will run a PIO-based USB host and print output over UART.
+Absolute basic bare API USB Midi Host.   
+It will run a PIO-based USB host and print output over UART.   
+UART is on GPIO 0 and 1 and USB-PIO is on GPIO 2 and 3.   
 
 Based completely on the TinyUSB examples:
 
