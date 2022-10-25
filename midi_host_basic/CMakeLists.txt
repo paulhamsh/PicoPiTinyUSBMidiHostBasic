@@ -1,8 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
 
-#PH include(${CMAKE_CURRENT_SOURCE_DIR}/../../../hw/bsp/family_support.cmake)
-### include($PICO_SDK_PATH/lib/tinyusb/hw/bsp/family_support.cmake)
-
 ###include(~/pico2/pico-sdk/lib/tinyusb/hw/bsp/family_support.cmake)
 include($ENV{PICO_SDK_PATH}/lib/tinyusb/hw/bsp/family_support.cmake)
 
