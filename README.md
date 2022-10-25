@@ -9,18 +9,38 @@ https://github.com/hathach/tinyusb/tree/master/examples/host/bare_api
 
 Installation:
 
-Install Pico Pi SDK.  
-Copy these files to a suitable location.  
+This is a full fresh installation of Pico SDK and this program.  
 
 ```
-export PICO_SDK_PATH=~/pico2/pico-sdk  # your SDK location
+cd ~
+mkdir pico_base
+cd pico_base
 
-mkdir
+sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
+git clone https://github.com/raspberrypi/pico-sdk
+
+# For USB support
+cd pico-sdk
+git submodule update --init
+cd ~
+
+export PICO_SDK_PATH=~/pico_base/pico-sdk  # your SDK location
+
+# And for this program - start here but amend for your PICO_SDK_PATH
+
+git clone https://github.com/paulhamsh/PicoPiTinyUSBMidiHostBasic
+
+cd PicoPiTinyUSBMidiHostBasic/midi_host_basic
+
+cp ~/pico_base/pico-sdk/external/pico_sdk_import.cmake .
+mkdir build
 cd build
+
 cmake -DFAMILY=rp2040 ..
 make
 
 ```
+
 
 The CMakelists.txt has some key changes:
 
