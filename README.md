@@ -37,8 +37,7 @@ export PICO_SDK_PATH=~/pico_base/pico-sdk  # your SDK location
 cd ~
 git clone https://github.com/paulhamsh/PicoPiTinyUSBMidiHostBasic
 cd PicoPiTinyUSBMidiHostBasic/midi_host_basic
-cp ~/pico_base/pico-sdk/external/pico_sdk_import .
-cmake .
+cp ~/pico_base/pico-sdk/external/pico_sdk_import.cmake    .
 mkdir build
 cd build
 
